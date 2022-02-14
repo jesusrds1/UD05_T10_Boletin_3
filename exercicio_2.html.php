@@ -8,19 +8,24 @@
    <title>Boletin 3 EXERCICIO 1</title>
 </head>
 <body>
+<form action="exercicio_2.html.php" method="post">
+<p>Inserte unha hora: <input type="number" name="hora"></p>
+<input type="submit" value="enviar">
+<br/>
 <?php
+
 if(!isset($_REQUEST["hora"])){
 
-}else if($_REQUEST["hora"]>= 13 || $_REQUEST["hora"]<=20)  {
-    echo "Buenas tardes";
+}else if ($_REQUEST["hora"]>= 6 && $_REQUEST["hora"] <=12)  {
+    echo "Buenos Tardes";
 
-}else if($_REQUEST["hora"]>= 6 || $_REQUEST["hora"]<=12)  {
-    echo "Buenos Dias";
+}else if($_REQUEST["hora"]>= 13 && $_REQUEST["hora"]<=20)  {
+    echo "Buenos Tardes";
 
 }else if($_REQUEST["hora"]>= 21 || $_REQUEST["hora"]<=5)  {
-    echo "Buenos Dias";
+    echo "Buenas noches";
     
-}else{}  
+}
 
 ?>
 </body>
